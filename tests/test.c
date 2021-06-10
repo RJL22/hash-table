@@ -18,5 +18,7 @@ int main() {
 	printf("%s\n", item2);
 	printf("%s\n", item3);
 
+	delete_hashtable(hashTable);
+
 	return 0;
 }
