@@ -1,4 +1,4 @@
 #include <math.h>
+#include <stdbool.h>
 
-static int is_prime(const int x);
 int next_prime(int x);
