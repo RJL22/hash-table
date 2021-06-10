@@ -61,16 +61,16 @@ static void ht_resize_down(ht_hash_table* ht) {
 	ht_resize(ht, ht->size / 2);
 }
 
-static void delete_hashtable_item(struct ht_item* i) {
-	free(i->key);
-	free(i->value);
-	free(i);
+static void delete_hashtable_item(struct ht_item* a_item) {
+	free(a_item->key);
+	free(a_item->value);
+	free(a_item);
 }
 
 void delete_hashtable(ht_hash_table* ht) {
 	for (int i = 0; i < ht->size; i++) {
 		struct ht_item* item = ht->items[i];
-		if (item != NULL) {
+		if (item != NULL && item != &HT_DELETED_ITEM) {
 			delete_hashtable_item(item);
 		}
 	}

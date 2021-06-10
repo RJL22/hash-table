@@ -26,7 +26,7 @@ typedef struct {
 
 //Methods for hashtable creation and deletion
 ht_hash_table* new_hashtable();
-void delete_hashtable();
+void delete_hashtable(ht_hash_table* ht);
 
 //Methods for hashtable management
 void ht_insert(ht_hash_table* ht, char* key, char* value);
